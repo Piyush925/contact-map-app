@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Demo Link: https://contact-map-app-gamma.vercel.app/contacts
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -38,6 +40,17 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+# This app serves two primary purposes:
+
+Contact Management: It allows users to efficiently manage their contacts by adding, viewing, editing, and deleting them. The app uses Redux to store the contact data, and React Query to handle API calls and data management.
+
+Charts and Maps Dashboard: The app displays a dashboard that displays a line graph of the fluctuations in COVID-19 cases, providing an overview of the pandemic situation. The app also uses React Leaflet to display a map with markers that show the country name, along with its corresponding total number of active, recovered cases, and deaths. This dashboard provides users with a comprehensive visual representation of the COVID-19 situation around the world.
+
+# APIs Used
+The following APIs were used to fetch data:
+1) Country-specific data of cases (Used in Map): https://disease.sh/v3/covid-19/countries
+2) Graph data for cases with date (Used in Line Chart): https://disease.sh/v3/covid-19/historical/all?lastdays=all
 
 ## Learn More
 
