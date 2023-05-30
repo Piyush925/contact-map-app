@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navigate, Route, Routes } from "react-router-dom";
+import Contacts from "./components/Contact/Contact";
+import ChartsAndMaps from "./components/ChartsMap/index";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Header from "./components/Header/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <main className="bg-gray-50">
+            <section className="h-screen flex">
+                <Sidebar />
+                <section className="border-x flex-1">
+                    <Header/> 
+                    <Routes>
+                        <Route path="/" index element={<Navigate to="/contacts" />} />
+                        <Route path="/contacts" element={<Contacts />} />
+                        <Route path="/charts-and-maps" element={<ChartsAndMaps />} />
+                    </Routes>
+                </section>
+            </section>
+        </main>
+    );
 }
 
 export default App;
